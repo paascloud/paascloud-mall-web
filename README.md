@@ -18,8 +18,12 @@ http://mall.paascloud.net/
 ## 配套项目
 
 ```
-后端项目：https://github.com/paascloud/paascloud-master
+后端项目：https://github.com/paascloud/paascloud-master 
+         https://gitee.com/passcloud/paascloud-master
 登录入口：https://github.com/paascloud/paascloud-login-web
+         https://gitee.com/passcloud/paascloud-login-web
 后端入口：https://github.com/paascloud/paascloud-admin-web
+         https://gitee.com/passcloud/paascloud-admin-web
 前端入口：https://github.com/paascloud/paascloud-mall-web
+         https://gitee.com/passcloud/paascloud-mall-web
 ```
