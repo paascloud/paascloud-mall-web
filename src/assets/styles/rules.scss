@@ -1,0 +1,12 @@
+.el-button {
+    border-radius: 0 !important;
+}
+
+//覆盖disabled 禁止样式
+.el-input.is-disabled .el-input__inner {
+    cursor: default;
+}
+
+.el-select .el-input.is-disabled .el-input__inner{
+    cursor: default;
+}
