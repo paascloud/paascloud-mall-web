@@ -111,7 +111,7 @@
       queryCategoryData(resolve) {
         this.ajax({
           type: 'GET',
-          url: `/uac/auth/category/getProductCategoryDtoByPid/0`,
+          url: `/web/auth/category/getProductCategoryDtoByPid/0`,
           success: resolve
         });
       }

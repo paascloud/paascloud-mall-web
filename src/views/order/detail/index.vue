@@ -98,7 +98,7 @@
       },
       queryOrderItemVoList() {
         this.ajax({
-          url: `/omc/order/queryUserOrderDetailList/` + this.$route.query.orderNo,
+          url: `/web/order/queryUserOrderDetailList/` + this.$route.query.orderNo,
           success: (res) => {
             if (res.code === 200) {
               this.orderVo = res.result;
@@ -113,7 +113,7 @@
         }
         if (window.confirm('确实要取消该订单？')) {
           this.ajax({
-            url: `/omc/order/cancelOrderDoc/` + orderNo,
+            url: `/web/order/cancelOrderDoc/` + orderNo,
             success: (res) => {
               if (res.code === 200) {
                 this.goBack();

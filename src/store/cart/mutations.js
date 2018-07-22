@@ -63,7 +63,7 @@ export default {
       state.cartList[state.curIndex].quantity = 0;
       state.cartList.splice(state.curIndex, 1);
       if (PcCookie.get(enums.USER.LOGIN_NAME)) {
-        axios.post(`/uac/cart/deleteProduct/` + cartItem.productId);
+        axios.post(`/web/cart/deleteProduct/` + cartItem.productId);
       }
     }
   },
@@ -71,7 +71,7 @@ export default {
     state.cartList.push(product);
     let loginName = store.getters.getLoginName;
     if (loginName) {
-      axios.post(`/uac/cart/addProduct/` + product.productId + '/' + product.quantity);
+      axios.post(`/web/cart/addProduct/` + product.productId + '/' + product.quantity);
     }
   },
   [types.PLUS_COUNT](state) {
@@ -80,7 +80,7 @@ export default {
     let loginName = store.getters.getLoginName;
     if (loginName) {
       let cartItem = state.cartList[state.curIndex];
-      axios.post(`/uac/cart/updateProduct/` + cartItem.productId + '/' + state.cartList[state.curIndex].quantity);
+      axios.post(`/web/cart/updateProduct/` + cartItem.productId + '/' + state.cartList[state.curIndex].quantity);
     }
   },
   [types.MINUS_COUNT](state) {
@@ -89,7 +89,7 @@ export default {
     if (store.getters.getLoginName) {
       let cartItem = state.cartList[state.curIndex];
       console.info('state.cartList[state.curIndex].quantity', state.cartList[state.curIndex].quantity);
-      axios.post(`/uac/cart/updateProduct/` + cartItem.productId + '/' + state.cartList[state.curIndex].quantity);
+      axios.post(`/web/cart/updateProduct/` + cartItem.productId + '/' + state.cartList[state.curIndex].quantity);
     }
     if (state.cartList[state.curIndex].quantity === 0) {
       state.cartList.splice(state.curIndex, 1);
@@ -111,14 +111,14 @@ export default {
     console.info('选中', state, productId);
     state.cartList[state.curIndex].checked = 1;
     if (PcCookie.get(enums.USER.LOGIN_NAME)) {
-      axios.post(`/uac/cart/selectProduct/` + productId);
+      axios.post(`/web/cart/selectProduct/` + productId);
     }
   },
   [types.UN_SELECT_PRODUCT](state, {productId}) {
     console.info('取消选中', state, productId);
     state.cartList[state.curIndex].checked = 0;
     if (PcCookie.get(enums.USER.LOGIN_NAME)) {
-      axios.post(`/uac/cart/unSelectProduct/` + productId);
+      axios.post(`/web/cart/unSelectProduct/` + productId);
     }
   },
   [types.SELECT_ALL_PRODUCT](state) {
@@ -126,7 +126,7 @@ export default {
       state.cartList[index].checked = 1;
     }
     if (PcCookie.get(enums.USER.LOGIN_NAME)) {
-      axios.post(`/uac/cart/selectAllProduct/`);
+      axios.post(`/web/cart/selectAllProduct/`);
     }
   },
   [types.UN_SELECT_ALL_PRODUCT](state) {
@@ -134,7 +134,7 @@ export default {
       state.cartList[index].checked = 0;
     }
     if (PcCookie.get(enums.USER.LOGIN_NAME)) {
-      axios.post(`/uac/cart/unSelectAllProduct/`);
+      axios.post(`/web/cart/unSelectAllProduct/`);
     }
   }
 };

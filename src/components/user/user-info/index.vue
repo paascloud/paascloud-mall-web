@@ -32,7 +32,7 @@
     methods: {
       queryUserInfo() {
         this.ajax({
-          url: `/uac/user/getInformation`,
+          url: `/web/user/getInformation`,
           success: (res) => {
             if (res.code === 200) {
               this.userForm = res.result;

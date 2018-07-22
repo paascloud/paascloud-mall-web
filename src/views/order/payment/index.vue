@@ -50,7 +50,7 @@
             this.loadPage('user-order');
           }
           this.ajax({
-            url: `/omc/order/queryOrderPayStatus/` + orderNo,
+            url: `/web/order/queryOrderPayStatus/` + orderNo,
             isUnMusk: true,
             success: (res) => {
               if (res.result) {
@@ -68,7 +68,7 @@
           return;
         }
         this.ajax({
-          url: `/omc/pay/createQrCodeImage/` + orderNo,
+          url: `/web/pay/createQrCodeImage/` + orderNo,
           success: (res) => {
             if (res.code === 200) {
               this.optUploadFileRespDto = res.result;

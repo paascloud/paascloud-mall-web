@@ -65,7 +65,7 @@ let mixin = {
     },
     logout() {
       this.$http({
-        url: '/uac/user/logout',
+        url: '/web/user/logout',
         method: 'post',
         params: {
           accessToken: this.$store.getters.getAccessToken

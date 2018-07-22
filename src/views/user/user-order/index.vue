@@ -45,7 +45,7 @@
     methods: {
       queryOrderItemVoList() {
         this.ajax({
-          url: `/omc/order/queryUserOrderListWithPage`,
+          url: `/web/order/queryUserOrderListWithPage`,
           data: {
             pageNum: 1,
             pageSize: 10

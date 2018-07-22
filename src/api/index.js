@@ -1,6 +1,6 @@
 import axios from 'axios';
 import store from '../store/';
-const REFRESH_TOKEN_URL = '/uac/auth/user/refreshToken';
+const REFRESH_TOKEN_URL = '/web/auth/user/refreshToken';
 export function refreshToken () {
   return axios({
     method: 'GET',

@@ -117,7 +117,7 @@
         this.checkedAllFlag = 'checked';
         for (let index in this.cartList) {
           let item = this.cartList[index];
-          if (typeof item.checked === 'undefined' || item.checked === 0) {
+          if (typeof item.checked === 'undefined' || item.checked === 0 || item.checked === false) {
             this.checkedAllFlag = '';
             break;
           }

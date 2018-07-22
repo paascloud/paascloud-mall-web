@@ -46,7 +46,7 @@
         let ivStr = gbs.secret.iv_str;
         email = this.$pcEncrypt.aesEncrypt(email, keyStr, ivStr);
         this.ajax({
-          url: `/uac/email/sendRestEmailCode`,
+          url: `/web/email/sendRestEmailCode`,
           isUnMusk: true,
           data: {
             email: email
@@ -78,7 +78,7 @@
         let ivStr = gbs.secret.iv_str;
         email = this.$pcEncrypt.aesEncrypt(email, keyStr, ivStr);
         this.ajax({
-          url: `/uac/email/checkRestEmailCode`,
+          url: `/web/email/checkRestEmailCode`,
           isUnMusk: true,
           data: {
             email: email,
@@ -87,7 +87,7 @@
           success: (res) => {
             if (res.code === 200) {
               _this.ajax({
-                url: `/uac/user/updateInformation`,
+                url: `/web/user/updateInformation`,
                 isUnMusk: true,
                 data: {
                   email: _this.updateUserForm
@@ -102,7 +102,7 @@
       },
       queryUserInfo() {
         this.ajax({
-          url: `/uac/user/getInformation`,
+          url: `/web/user/getInformation`,
           success: (res) => {
             if (res.code === 200) {
               this.updateUserForm = res.result;

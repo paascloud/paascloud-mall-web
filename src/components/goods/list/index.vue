@@ -60,7 +60,7 @@
         this.queryInfo.categoryId = this.getUrlParam('categoryId');
         this.queryInfo.keyword = this.getUrlParam('keyword');
         this.ajax({
-          url: `/uac/auth/product/queryProductList`,
+          url: `/web/auth/product/queryProductList`,
           data: this.queryInfo,
           success: (res) => {
             if (res.code === 200) {

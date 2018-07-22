@@ -11,18 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/uac': {
+      '/web': {
         target: 'http://dev-api.paascloud.net:7979/',
         changeOrigin: true,
         pathRewrite: {
           '^/uac': '/uac'
-        }
-      },
-      '/omc': {
-        target: 'http://dev-api.paascloud.net:7979/',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/omc': '/omc'
         }
       }
     },

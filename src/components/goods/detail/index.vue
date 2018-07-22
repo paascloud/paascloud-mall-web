@@ -106,7 +106,7 @@
         }
         this.ajax({
           type: 'GET',
-          url: `/uac/auth/product/queryProductDetail/` + productId,
+          url: `/web/auth/product/queryProductDetail/` + productId,
           success: (res) => {
             if (res.code === 200) {
               this.product = res.result;

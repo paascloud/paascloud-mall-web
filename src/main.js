@@ -80,7 +80,7 @@ function mergeCartFlag() {
     cartListDto.cartProductVoList = PcLockr.get(enums.CART.SHOPPING_CART) ? JSON.parse(PcLockr.get(enums.CART.SHOPPING_CART)) : [];
     axios({
       method: 'post',
-      url: '/uac/cart/mergeUserCart',
+      url: '/web/cart/mergeUserCart',
       data: cartListDto
     })
       .then((res) => {
