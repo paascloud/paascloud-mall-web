@@ -13,7 +13,15 @@
       <p class="payment-tips">订单提交成功，请尽快支付！订单号：{{orderNo}}</p>
       <p class="payment-tips enhance">请使用支付宝沙箱App扫描如下二维码进行支付：</p>
       <div class="img-con">
-        <img class="qr-code" v-lazy="optUploadFileRespDto.attachmentUrl" alt="支付二维码"/>
+        <img class="qr-code" v-lazy="optUploadFileRespDto.attachmentUrl" :key = "optUploadFileRespDto.attachmentUrl" alt="支付二维码"/>
+      </div>
+    </div>
+    <div class="pay-wrap w">
+      <p class="payment-tips">体验支付请扫描下方提供的二维码或者点击<a href="https://sandbox.alipaydev.com/user/downloadApp.htm">下载</a>沙箱APP</p>
+      <p class="payment-tips enhance">沙箱账号: fkdfrt3029@sandbox.com</p>
+      <p class="payment-tips enhance">登录密码: 111111 支付密码: 111111</p>
+      <div class="img-con">
+        <img class="qr-code" src="https://zos.alipayobjects.com/rmsportal/CaXHDDXkdxikcZP.png" alt="下载二维码"/>
       </div>
     </div>
   </div>
